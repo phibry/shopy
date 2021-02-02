@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <title>shopy</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="product-box">
+        <h2>Shopy</h2>
+        <form id="product-form" autocomplete="off">
+          <div class="add-box">
+            <input type="text" name="product" id="product" required="" />
+            <label for="product">Add Product</label>
+          </div>
+          <div class="global-btn add">
+            <a href="#">
+              <span>Add Product</span>
+              <svg width="13px" height="10px" viewBox="0 0 13 10">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+              </svg>
+            </a>
+          </div>
+        </form>
+      </div>
+      <div class="list-box">
+        <h3>Shopping List</h3>
+        <ul class="collection"></ul>
+        <div class="global-btn clear">
+          <a href="#">
+            <span>Clear</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

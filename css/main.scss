@@ -1,0 +1,183 @@
+@import 'var';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background: #243b55;
+  // background: linear-gradient(#141e30, #243b55);
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.container {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  padding: 45px;
+}
+
+.global-btn {
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  transition: all 2s ease;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgba($col1, 0.5);
+    width: 56px;
+    height: 56px;
+    transition: all 0.3s ease;
+  }
+
+  span {
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #fff;
+    stroke-width: 2;
+    transform: translateX(-7px);
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    &:before {
+      width: 100%;
+      background: rgba($col1, 1);
+    }
+    svg {
+      transform: translateX(0);
+    }
+  }
+  &:active {
+    transform: scale(0.6);
+  }
+}
+
+.product-box {
+  position: relative;
+  padding: 40px;
+  background: rgba(0,0,0,0.7);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.6);
+  border-radius: 10px 10px 0 0 ;
+
+  h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+  }
+
+  .add-box {
+    position: relative;
+
+    input {
+      width: 100%;
+      padding: 10px 0;
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 30px;
+      border: none;
+      border-bottom: 1px solid #404040;
+      outline: none;
+      background: transparent;
+    }
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #fff;
+      padding: 10px 0;
+      font-size: 1rem;
+      pointer-events: none;
+      transition: 0.2s; 
+    }
+
+    input:focus ~ label,
+    input:valid ~ label {
+      top: -20px;
+      left: 0;
+      color: $col1;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.list-box {
+  position: relative;
+  padding: 40px;
+  background: rgba(0,0,0,0.7);
+  box-shadow: 0 15px 25px 0 rgba(0,0,0,0.6);
+  border-radius: 0 0 10px 10px;
+
+  h3 {
+    color: #fff;
+    margin-bottom: 30px;
+  }
+
+  .clear {
+    &::before {
+      background: rgba($col2, 0.5);
+    }
+
+    &:hover {
+      &:before {
+        width: 100%;
+        background: rgba($col2, 1);
+      }
+    }
+  }
+  .collection {
+    margin: 0 0 3rem 0;
+    position: relative;
+    list-style-type: none;
+    color: #fff;
+
+    &-item {
+      line-height: 1.5rem;
+      padding: 10px 20px;
+      margin: 0;
+      border-bottom: 0.01px solid #404040;
+
+      .delete-item {
+        float: right;
+
+        i {
+          color: $col2;
+        }
+      }
+    }
+  }
+}
