@@ -5,15 +5,11 @@
   padding: 0;
 }
 
-html {
-  height: 100%;
-}
 
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   background: #243b55;
-  // background: linear-gradient(#141e30, #243b55);
 }
 
 a {
@@ -23,10 +19,11 @@ a {
 }
 
 .container {
-  display: block;
   width: 400px;
-  margin: 0 auto;
-  padding: 45px;
+  margin: 50px auto;
+  border-radius: 10px;
+  background: #243b55;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.6);
 }
 
 .global-btn {
@@ -89,8 +86,7 @@ a {
 .product-box {
   position: relative;
   padding: 40px;
-  background: rgba(0,0,0,0.7);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.4);
   border-radius: 10px 10px 0 0 ;
 
   h2 {
@@ -109,7 +105,8 @@ a {
       color: #fff;
       margin-bottom: 30px;
       border: none;
-      border-bottom: 1px solid #404040;
+      // border-bottom: 1px solid #404040;
+      border-bottom: 1px solid #fff;
       outline: none;
       background: transparent;
     }
@@ -138,8 +135,7 @@ a {
 .list-box {
   position: relative;
   padding: 40px;
-  background: rgba(0,0,0,0.7);
-  box-shadow: 0 15px 25px 0 rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.4);
   border-radius: 0 0 10px 10px;
 
   h3 {
@@ -169,7 +165,8 @@ a {
       line-height: 1.5rem;
       padding: 10px 20px;
       margin: 0;
-      border-bottom: 0.01px solid #404040;
+      // border-bottom: 0.01px solid #404040;
+      // border-bottom: 1px solid #fff;
 
       .delete-item {
         float: right;
@@ -178,6 +175,34 @@ a {
           color: $col2;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+
+  html {
+    background: #243b55;
+  }
+
+  body {
+    background: rgba(0,0,0,0.4);
+  }
+  .container {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+
+    .product-box {
+      border-radius: 0;
+      background: none;
+
+
+    }
+    .list-box {
+      border-radius: 0;
+      background: none;
     }
   }
 }
